@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build-A-Boyfriend | findyourdate.xoxo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@400;700&display=swap');
+        
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #fffdf5; }
+        .logo-font { font-family: 'Fredoka One', cursive; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .main-gradient { background: linear-gradient(135deg, #ffed4a 0%, #ff9d00 100%); }
+    </style>
+</head>
+<body>
+
+    <section id="main-page" class="min-h-screen flex flex-col items-center justify-center text-center p-5">
+        <h1 class="logo-font text-6xl text-orange-500 mb-4 tracking-wider">Build-A-Boyfriend</h1>
+        <p class="text-gray-600 mb-8 italic text-lg">"당신의 환상을 현실로 만들어보세요"</p>
+        
+        <button onclick="goToProfile()" class="main-gradient text-white px-10 py-4 rounded-full text-2xl font-bold shadow-lg hover:scale-105 transition-transform active:scale-95">
+            Find your date! <i class="fa-solid fa-heart ml-2"></i>
+        </button>
+        <p class="mt-4 text-sm text-orange-300">findyourdate.xoxo</p>
+    </section>
+
+    <section id="profile-page" class="hidden min-h-screen p-5 md:p-10">
+        <div class="max-w-4xl mx-auto bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            
+            <div class="md:w-1/2 bg-orange-100 relative min-h-[500px]">
+                <img src="https://files.catbox.moe/67x01i.jpg" alt="Leo Harrington" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+
+            <div class="md:w-1/2 p-10 flex flex-col justify-center">
+                <div class="mb-6">
+                    <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-bold tracking-widest uppercase">Best Choice</span>
+                    <h2 class="text-5xl font-bold text-gray-800 mt-2">Leo Harrington</h2>
+                </div>
+
+                <div class="space-y-3 mb-8 text-xl text-gray-700">
+                    <p><strong>Age:</strong> 22</p>
+                    <p><strong>Size:</strong> 191 - 21</p>
+                    <p class="italic text-orange-500 font-medium">"Make your fantasy come true ;)"</p>
+                </div>
+
+                <div class="border-t pt-6">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-gray-500">(1,248 reviews)</span>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-2xl italic text-gray-600 text-sm">
+                        "진짜 화면 뚫고 나오는 줄 알았어요... 햇살 그 자체! 🧡"
+                    </div>
+                </div>
+
+                <button class="mt-8 w-full py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-black transition-colors">
+                    Add to My Fantasy
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function goToProfile() {
+            document.getElementById('main-page').classList.add('hidden');
+            document.getElementById('profile-page').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
